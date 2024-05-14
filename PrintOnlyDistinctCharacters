@@ -1,0 +1,42 @@
+package programs;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
+
+public class PrintOnlyDistinctCharacter {
+
+	public static void main(String[] args) {
+String name1="Engineeg";
+		
+		String name=name1.toLowerCase();
+		
+		//output=i
+		
+		char[] c=name.toCharArray();
+		char n;
+		ArrayList<Character> li=new ArrayList<Character>();--List to store char array
+		ArrayList<Character> li1=new ArrayList<Character>(); --List to store only duplicate values
+//adding char array elements to li
+		for(char ch:c)
+		{
+			li.add(ch);
+		}		
+
+//iterating through li and identifying same value elements and adding to li1
+		for(int i=0;i<=c.length-1;i++)
+		{
+			for(int j=i+1;j<=c.length-1;j++)
+			{
+			if(c[i]==c[j])
+			{
+				n=c[i];
+				li1.add(n);	
+			}}}
+
+//Removing li1(which contains duplicalte) from main li
+		li.removeAll(li1);
+//Print main li
+		System.out.println(li);
+	}
+	}
